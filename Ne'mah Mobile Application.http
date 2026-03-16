@@ -1,0 +1,6 @@
+@Ne_mah_Mobile_Application_HostAddress = http://localhost:5166
+
+GET {{Ne_mah_Mobile_Application_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
