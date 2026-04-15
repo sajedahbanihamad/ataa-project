@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nemah_Mobile_Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e7b2ea711d182750278dff0aa573b2b69935d35")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nemah_Mobile_Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nemah_Mobile_Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
