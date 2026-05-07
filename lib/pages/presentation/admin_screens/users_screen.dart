@@ -220,7 +220,7 @@ class _UsersScreenState extends State<UsersScreen> {
                 ),
               ),
             );
-          }).toList()
+          })
         ],
       ),
     );
