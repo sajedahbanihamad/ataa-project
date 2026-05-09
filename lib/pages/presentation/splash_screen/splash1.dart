@@ -59,7 +59,7 @@ class SplashScreen extends StatelessWidget {
 
               /// Title
               const Text(
-                "Save Surplus Food",
+                "Give Items a Second Life",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 32,
@@ -71,7 +71,7 @@ class SplashScreen extends StatelessWidget {
 
               /// Description
               const Text(
-                "Donate extra food to local charities and help reduce food waste.",
+                "Donate food, clothes, furniture,and more to trusted charities easily.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,

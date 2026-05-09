@@ -24,6 +24,8 @@ class _LoginScreenState extends State<LoginScreen> {
   bool rememberMe = false;
   bool isLoading = false;
 
+  String selectedRole = "Charity";
+
   @override
   void dispose() {
     emailController.dispose();
@@ -142,12 +144,28 @@ class _LoginScreenState extends State<LoginScreen> {
                               .copyWith(height: 1.29),
                           textAlign: TextAlign.center,
                         ),
+                        SizedBox(height: 20.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            _buildRoleOption("Charity"),
+                            _buildRoleOption("Business\nDonor"),
+                          ],
+                        ),
+                        SizedBox(height: 10.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            _buildRoleOption("Individual\nDonor"),
+                            _buildRoleOption("Admin"),
+                          ],
+                        ),
                         CustomEditText(
                           placeholder: "Email",
                           inputType: TextInputType.emailAddress,
                           controller: emailController,
                           validator: _validateEmail,
-                          margin: EdgeInsets.only(top: 64.h),
+                          margin: EdgeInsets.only(top: 40.h),
                         ),
                         CustomEditText(
                           placeholder: "Password",
@@ -234,6 +252,37 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildRoleOption(String role) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          selectedRole = role;
+        });
+      },
+      child: SizedBox(
+        width: 120.h,
+        child: Row(
+          children: [
+            Icon(
+              selectedRole == role
+                  ? Icons.radio_button_checked
+                  : Icons.radio_button_off,
+              color: Colors.grey,
+              size: 18.h,
+            ),
+            SizedBox(width: 6.h),
+            Expanded(
+              child: Text(
+                role,
+                style: TextStyleHelper.instance.body14RegularPlusJakartaSans,
+              ),
+            ),
+          ],
         ),
       ),
     );

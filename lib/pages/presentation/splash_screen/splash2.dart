@@ -54,7 +54,7 @@ class SecondScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
-                  "Turn surplus food into meals for people in your community.",
+                  "Choose a charity yourself or let the system find the best match for your donation.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,

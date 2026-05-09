@@ -39,7 +39,7 @@ class AppRoutes {
   static const String maindonorScreen = '/main_donorscreen';
   static const String registrationScreen = '/registration_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
-  static const String initialRoute = '/login_screen';
+  static const String initialRoute = '/splash1';
   static const String homeScreen = '/home_screen';
   static const String createDonationScreen = '/create_donation_screen';
   static const String notificationsScreen = '/notifications_screen';

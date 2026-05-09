@@ -105,6 +105,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             _buildAccountTypeSelection(),
 
             // ── Individual Donor ──
+
             if (selectedAccountType == 'individual') ...[
               _buildLabellessField(
                 placeholder: 'Enter Your Full Name',
@@ -114,6 +115,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ? 'Please enter your full name'
                     : null,
                 topMargin: 26.h,
+              ),
+              _buildLabellessField(
+                placeholder: 'Enter Your Email',
+                controller: emailController,
+                inputType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
+                      .hasMatch(value)) {
+                    return 'Please enter a valid email';
+                  }
+                  return null;
+                },
+                topMargin: 8.h,
               ),
               _buildLabellessField(
                 placeholder: 'Enter Your Phone Number',
@@ -144,7 +161,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               _buildDonorConditionsCheckbox(),
               _buildTermsCheckbox(),
             ],
-
             // ── Charity ──
             if (selectedAccountType == 'charity') ...[
               _buildEmailField(),
@@ -173,13 +189,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 inputType: TextInputType.phone,
               ),
               _buildLabeledField(
+                label: 'ID',
+                placeholder: 'Enter Your ID',
+                controller: officeAddressController,
+                inputType: TextInputType.number,
+              ),
+              _buildLabeledField(
                 label: 'Office Address',
                 placeholder: 'Enter physical office location',
                 controller: officeAddressController,
                 inputType: TextInputType.streetAddress,
               ),
             ],
-
             // ── Business Donor ──
             if (selectedAccountType == 'business') ...[
               _buildEmailField(),
