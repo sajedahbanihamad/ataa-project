@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Atta_Mobile_Application.props" />
+</Project>

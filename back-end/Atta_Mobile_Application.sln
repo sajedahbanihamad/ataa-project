@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36930.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atta_Mobile_Application", "Atta_Mobile_Application.csproj", "{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B365542-A237-4E6A-8AC9-FDCCA400DC76}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Debug|x64.Build.0 = Debug|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Debug|x86.Build.0 = Debug|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Release|x64.ActiveCfg = Release|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Release|x64.Build.0 = Release|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1D0DE67-4206-4A7F-8FF8-CA4A4A4D9EB5}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
