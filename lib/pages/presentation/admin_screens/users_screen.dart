@@ -57,41 +57,16 @@ class _UsersScreenState extends State<UsersScreen> {
   ];
 
   final charities = [
-    {
-      "id": 7,
-      "name": "Food Bank Network",
-      "rating": 4.9,
-      "status": "Active",
-      "received": 156
-    },
-    {
-      "id": 8,
-      "name": "Hope Foundation",
-      "rating": 4.8,
-      "status": "Active",
-      "received": 142
-    },
-    {
-      "id": 9,
-      "name": "Save Lives",
-      "rating": 4.7,
-      "status": "Active",
-      "received": 98
-    },
+    {"id": 7, "name": "Food Bank Network", "status": "Active", "received": 156},
+    {"id": 8, "name": "Hope Foundation", "status": "Active", "received": 142},
+    {"id": 9, "name": "Save Lives", "status": "Active", "received": 98},
     {
       "id": 10,
       "name": "Community Kitchen",
-      "rating": 4.6,
       "status": "Suspended",
       "received": 67
     },
-    {
-      "id": 11,
-      "name": "Education First",
-      "rating": 4.9,
-      "status": "Active",
-      "received": 203
-    },
+    {"id": 11, "name": "Education First", "status": "Active", "received": 203},
   ];
 
   @override
@@ -172,18 +147,19 @@ class _UsersScreenState extends State<UsersScreen> {
                                       fontWeight: FontWeight.w500),
                                 ),
                               ),
-                              Row(
-                                children: [
-                                  Text(
-                                    user["rating"].toString(),
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  const SizedBox(width: 4),
-                                  const Text("★",
-                                      style: TextStyle(color: Colors.orange)),
-                                ],
-                              )
+                              if (activeTab == "donors")
+                                Row(
+                                  children: [
+                                    Text(
+                                      user["rating"].toString(),
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    const SizedBox(width: 4),
+                                    const Text("★",
+                                        style: TextStyle(color: Colors.orange)),
+                                  ],
+                                ),
                             ],
                           ),
                           const SizedBox(height: 4),

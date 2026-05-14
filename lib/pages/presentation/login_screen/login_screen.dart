@@ -33,6 +33,21 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
+  String _getRouteForRole(String role) {
+    switch (role) {
+      case "Charity":
+        return AppRoutes.maincharityScreen;
+      case "Business\nDonor":
+        return AppRoutes.maindonorScreen;
+      case "Individual\nDonor":
+        return AppRoutes.maindonorScreen;
+      case "Admin":
+        return AppRoutes.mainadminScreen;
+      default:
+        return AppRoutes.maindonorScreen;
+    }
+  }
+
   Future<void> login() async {
     setState(() => isLoading = true);
 
@@ -59,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
         passwordController.clear();
         setState(() => rememberMe = false);
 
-        Navigator.pushReplacementNamed(context, AppRoutes.maindonorScreen);
+        Navigator.pushReplacementNamed(context, _getRouteForRole(selectedRole));
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(

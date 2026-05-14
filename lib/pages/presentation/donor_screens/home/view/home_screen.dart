@@ -1,48 +1,23 @@
+import 'package:Ataa/pages/presentation/donor_screens/home/controller/home_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(HomeController());
+
     final stats = [
       {"label": "Total Donations", "value": "28", "icon": Icons.favorite},
       {"label": "Items Donated", "value": "124", "icon": Icons.inventory},
       {"label": "Community Rating", "value": "4.9", "icon": Icons.trending_up},
     ];
-
-    final recentDonations = [
-      {
-        "id": 1,
-        "charity": "Food Bank Central",
-        "category": "Food",
-        "items": "10 meal boxes",
-        "date": "Apr 25",
-        "status": "Delivered"
-      },
-      {
-        "id": 2,
-        "charity": "Clothes for Hope",
-        "category": "Clothing",
-        "items": "3 bags",
-        "date": "Apr 20",
-        "status": "In Transit"
-      },
-      {
-        "id": 3,
-        "charity": "Books for Kids",
-        "category": "Books",
-        "items": "15 books",
-        "date": "Apr 15",
-        "status": "Delivered"
-      },
-    ];
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          // ✅ التعديل: إزالة الـ padding السفلي الكبير لأن الـ BottomNav صار في MainScreen
           padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,10 +130,10 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 12),
               Expanded(
                 child: ListView.builder(
-                  itemCount: recentDonations.length,
+                  itemCount: controller.recentDonations.length,
                   itemBuilder: (context, index) {
-                    final donation = recentDonations[index];
-                    final isDelivered = donation["status"] == "Delivered";
+                    final donation = controller.recentDonations[index];
+                    final isDelivered = donation.status == "Delivered";
 
                     return Container(
                       margin: const EdgeInsets.only(bottom: 12),
@@ -178,12 +153,12 @@ class HomeScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      donation["charity"] as String,
+                                      donation.charity,
                                       style: const TextStyle(fontSize: 16),
                                     ),
                                     const SizedBox(height: 4),
                                     Text(
-                                      "${donation["category"]} • ${donation["items"]}",
+                                      "${donation.category} • ${donation.items}",
                                       style: const TextStyle(
                                           fontSize: 14, color: Colors.grey),
                                     ),
@@ -191,7 +166,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                donation["date"] as String,
+                                donation.date,
                                 style: const TextStyle(
                                     fontSize: 12, color: Colors.grey),
                               ),
@@ -208,7 +183,7 @@ class HomeScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Text(
-                              donation["status"] as String,
+                              donation.status,
                               style: TextStyle(
                                 fontSize: 12,
                                 color: isDelivered

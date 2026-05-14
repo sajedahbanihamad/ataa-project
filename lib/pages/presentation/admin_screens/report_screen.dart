@@ -28,13 +28,12 @@ class _ReportsScreenState extends State<ReportsScreen> {
   ];
 
   final topCharities = [
-    {"name": "Education First", "received": 203, "rating": 4.9},
-    {"name": "Food Bank Network", "received": 156, "rating": 4.9},
-    {"name": "Hope Foundation", "received": 142, "rating": 4.8},
-    {"name": "Save Lives", "received": 98, "rating": 4.7},
+    {"name": "Education First", "received": 203},
+    {"name": "Food Bank Network", "received": 156},
+    {"name": "Hope Foundation", "received": 142},
+    {"name": "Save Lives", "received": 98},
   ];
 
-  /// ✅ fl_chart data
   List<BarChartGroupData> getChartData() {
     return List.generate(categoryData.length, (index) {
       final item = categoryData[index];
@@ -247,16 +246,9 @@ class _ReportsScreenState extends State<ReportsScreen> {
                       ],
                     ),
                   ),
-                  isDonor
-                      ? Text(item["amount"],
-                          style: const TextStyle(color: Color(0xFF529160)))
-                      : Row(
-                          children: [
-                            Text(item["rating"].toString()),
-                            const Text(" ★",
-                                style: TextStyle(color: Colors.orange)),
-                          ],
-                        )
+                  if (isDonor)
+                    Text(item["amount"],
+                        style: const TextStyle(color: Color(0xFF529160))),
                 ],
               ),
             );

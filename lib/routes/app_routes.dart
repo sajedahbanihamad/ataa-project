@@ -5,7 +5,7 @@ import '../pages/presentation/registration_screen/registration_screen.dart';
 import '../pages/presentation/splash_screen/splash1.dart';
 import '../pages/presentation/splash_screen/splash2.dart';
 import '../pages/presentation/app_navigation_screen/app_navigation_screen.dart';
-import '../pages/presentation/donor_screens/home_screen.dart';
+import '../pages/presentation/donor_screens/home/view/home_screen.dart';
 import '../pages/presentation/donor_screens/create_donation_screen.dart';
 import '../pages/presentation/donor_screens/notifications_screen.dart';
 import '../pages/presentation/donor_screens/profile_screen.dart';
