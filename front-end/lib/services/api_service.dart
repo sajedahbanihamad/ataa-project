@@ -4,8 +4,8 @@ import '../models/user_profile.dart';
 import 'token_service.dart';
 
 class ApiService {
-  static const String baseUrl = "http://10.0.2.2:7240/api";
-
+static const String baseUrl =
+    "https://ataadonationapi-d4c6bagtgydkdfc0.germanywestcentral-01.azurewebsites.net/api";
   static Future<UserProfile?> getProfile() async {
     final token = await TokenService.getToken();
 
